@@ -1,0 +1,145 @@
+body {
+  font-family: "Montserrat";
+  color: #2e2e2e;
+  margin: 0;
+}
+
+.bg {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#picker {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  font-family: "Montserrat";
+  color: #000000;
+  padding: 10px 0 10px 10px;
+  box-shadow: 5px 5px 24px rgba(0, 0, 0, 0.4);
+}
+
+.calendar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 917px;
+  width: 100%;
+  height: 768px;
+  box-shadow: 5px 5px 24px rgba(0, 0, 0, 0.4);
+
+  @media screen and (max-width: 768px) {
+    max-width: 611px;
+    width: 100%;
+  }
+
+  &__header {
+    position: relative;
+    box-sizing: border-box;
+    height: 296px;
+    background-position: center;
+    padding-top: 59px;
+    padding-left: 93px;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 110px;
+      padding-left: 40px;
+    }
+  }
+
+  &__table {
+    box-sizing: border-box;
+    height: 472px;
+    background-image: linear-gradient(140deg, #FCFCFC, #DEE2FF);
+    padding-top: 20px;
+
+    @media screen and (max-width: 768px) {
+      padding-left: 57px;
+      padding-right: 57px;
+    }
+  }
+}
+
+.header {
+  &__month {
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: capitalize;
+
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &__day {
+    position: absolute;
+    top: 82px;
+    left: 115px;
+    font-size: 50px;
+    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      font-size: 42px;
+      top: 129px;
+      left: 57px;
+    }
+  }
+
+  &__year {
+    position: absolute;
+    top: 69px;
+    right: 94px;
+    font-size: 50px;
+    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      font-size: 45px;
+      top: 115px;
+      right: 43px;
+    }
+  }
+}
+
+table {
+  max-width: 670px;
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+
+}
+
+thead,
+tbody {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+tbody {
+  color: rgba(44, 44, 44, 0.7);
+}
+
+td,
+th {
+  width: 60px;
+  height: 55px;
+  transition: 0.25s;
+}
+
+th {
+  padding-bottom: 25px;
+}
+
+.current-day {
+  color: #CC0000;
+}
+
+.passive {
+  color: rgba(44, 44, 44, 0.3);
+}
